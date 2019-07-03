@@ -5,3 +5,9 @@ img{
 .img-raised{
     box-shadow: $box-shadow-raised;
 }
+.background-svg {
+    background: url("../../images/background.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
