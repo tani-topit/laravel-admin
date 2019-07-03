@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Perdorues extends Controller
+class PerdoruesController extends Controller
 {
     /**
      * Display a listing of the resource.
