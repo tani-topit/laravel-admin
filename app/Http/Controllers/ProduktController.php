@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Produkt;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class ProduktController extends Controller
 {
@@ -13,7 +15,7 @@ class ProduktController extends Controller
      */
     public function index()
     {
-        //
+        return Produkt::paginate(15);
     }
 
     /**
