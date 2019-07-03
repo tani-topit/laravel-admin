@@ -20,6 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => ['auth:api']], function () {
     Route::resource('perdorues', 'PerdoruesController');
-    Route::resource('produkt', 'ProductController');
+    Route::resource('produkt', 'ProduktController');
     Route::resource('porosi', 'PorosiController');
 });

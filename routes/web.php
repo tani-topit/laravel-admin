@@ -24,5 +24,5 @@ Route::get('/dashboard', function (){
 });
 
 Route::resource('perdorues', 'PerdoruesController');
-Route::resource('produkt', 'ProductController');
+Route::resource('produkt', 'ProduktController');
 Route::resource('porosi', 'PorosiController');
