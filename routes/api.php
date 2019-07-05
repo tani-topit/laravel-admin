@@ -19,7 +19,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::group(['middleware' => ['auth:api']], function () {
-    Route::resource('perdorues', 'PerdoruesController');
-    Route::resource('produkt', 'ProduktController');
-    Route::resource('porosi', 'PorosiController');
+    // register post routes
+    Route::post('perdorues', 'PerdoruesController@apiStore');
+    Route::post('produkt', 'ProduktController@apiStore');
+    Route::post('porosi', 'PorosiController@apiStore');
+
+    //register get routes
+    Route::get('perdorues', 'PerdoruesController@apiIndex');
+    Route::get('produkt', 'ProduktController@apiIndex');
+    //Route::post('porosi', 'PorosiController@apiStore');
 });

@@ -19,9 +19,9 @@ Auth::routes(/*[ 'register' => false ]*/);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/dashboard', function (){
+Route::get('dashboard', ['as' => 'dashboard', function () {
     return view('dashboard.home');
-});
+}]);
 
 Route::resource('perdorues', 'PerdoruesController');
 Route::resource('produkt', 'ProduktController');

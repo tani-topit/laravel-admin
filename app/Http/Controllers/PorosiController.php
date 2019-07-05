@@ -2,10 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Perdorues;
+use App\Porosi;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class PorosiController extends Controller
 {
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            'total' => ['required', 'string', 'max:255'],
+            'id_perdorues' => ['required', 'int', 'exists:perdorues,id'],
+            'id_produkt' => ['required', 'int', 'exists:produkt,id'],
+            'source' => ['string']
+        ];
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -35,6 +54,15 @@ class PorosiController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    public function apiStore(Request $request)
+    {
+        $valid = $request->validate($this->rules());
+
+        $valid['data'] = Carbon::now()->toDateTimeString();
+
+        return response()->json(Porosi::create($valid));
     }
 
     /**

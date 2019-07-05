@@ -8,12 +8,38 @@ use Illuminate\Support\Facades\App;
 
 class ProduktController extends Controller
 {
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            'emer' => ['required', 'string', 'max:255'],
+            'cmim' => ['required', 'string', 'max:255'],
+            'sasi' => ['required', 'int', 'max:255'],
+            'source' => ['string']
+        ];
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
+    {
+        return Produkt::paginate(15);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function apiIndex()
     {
         return Produkt::paginate(15);
     }
@@ -37,6 +63,13 @@ class ProduktController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    public function apiStore(Request $request)
+    {
+        $valid = $request->validate($this->rules());
+
+        return response()->json(Produkt::create($valid));
     }
 
     /**

@@ -377,6 +377,13 @@ class ComposerStaticInit93cda94181159031b1f68e90f2e8b09f
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
             ),
         ),
+        'H' => 
+        array (
+            'Httpful' => 
+            array (
+                0 => __DIR__ . '/..' . '/nategood/httpful/src',
+            ),
+        ),
     );
 
     public static $classMap = array (
@@ -1084,6 +1091,21 @@ class ComposerStaticInit93cda94181159031b1f68e90f2e8b09f
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'Httpful\\Bootstrap' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Bootstrap.php',
+        'Httpful\\Exception\\ConnectionErrorException' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Exception/ConnectionErrorException.php',
+        'Httpful\\Handlers\\CsvHandler' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Handlers/CsvHandler.php',
+        'Httpful\\Handlers\\FormHandler' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Handlers/FormHandler.php',
+        'Httpful\\Handlers\\JsonHandler' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Handlers/JsonHandler.php',
+        'Httpful\\Handlers\\MimeHandlerAdapter' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Handlers/MimeHandlerAdapter.php',
+        'Httpful\\Handlers\\XHtmlHandler' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Handlers/XHtmlHandler.php',
+        'Httpful\\Handlers\\XmlHandler' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Handlers/XmlHandler.php',
+        'Httpful\\Http' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Http.php',
+        'Httpful\\Httpful' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Httpful.php',
+        'Httpful\\Mime' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Mime.php',
+        'Httpful\\Proxy' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Proxy.php',
+        'Httpful\\Request' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Request.php',
+        'Httpful\\Response' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Response.php',
+        'Httpful\\Response\\Headers' => __DIR__ . '/..' . '/nategood/httpful/src/Httpful/Response/Headers.php',
         'Illuminate\\Auth\\Access\\AuthorizationException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/AuthorizationException.php',
         'Illuminate\\Auth\\Access\\Gate' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/Gate.php',
         'Illuminate\\Auth\\Access\\HandlesAuthorization' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/Access/HandlesAuthorization.php',
